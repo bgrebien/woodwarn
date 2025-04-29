@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOODWARN Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://i.imgur.com/eYk7oKX.jpg'); /* Holz-Hintergrund */
+      background-size: cover;
+      background-position: center;
+      color: #222;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 10vh auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      margin-top: 25px;
+      background: #8B4513;
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #A0522D;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WOODWARN Einrichtung</h1>
+    <form method="POST" action="http://DEINE_IOBROKER_ADRESSE:PORT/setup">
+      <label for="geraet">Gerätename (z. B. woodwarn01)</label>
+      <input type="text" id="geraet" name="geraet" required>
+
+      <label for="wohnort">Wohnort oder PLZ</label>
+      <input type="text" id="wohnort" name="wohnort" required>
+
+      <button type="submit">Einrichtung abschließen</button>
+    </form>
+  </div>
+</body>
+</html>
