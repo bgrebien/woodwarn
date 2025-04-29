@@ -10,13 +10,12 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://i.imgur.com/eYk7oKX.jpg'); /* Holz-Hintergrund */
+      background: url('https://upload.wikimedia.org/wikipedia/commons/8/80/Wood_texture_1.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       color: #222;
     }
     .container {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       max-width: 500px;
       margin: 10vh auto;
       padding: 30px;
@@ -25,7 +24,12 @@
     }
     h1 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+    p.intro {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 25px;
     }
     label {
       display: block;
@@ -59,6 +63,10 @@
 <body>
   <div class="container">
     <h1>WOODWARN Einrichtung</h1>
+    <p class="intro">
+      Vielen Dank für deinen Kauf eines <strong>WOODWARN</strong> Unwetter-Warnsystems!<br>
+      Bitte gib jetzt deinen Wohnort ein, damit das Gerät automatisch passende Wetterwarnungen empfangen kann.
+    </p>
     <form method="POST" action="http://DEINE_IOBROKER_ADRESSE:PORT/setup">
       <label for="geraet">Gerätename (z. B. woodwarn01)</label>
       <input type="text" id="geraet" name="geraet" required>
